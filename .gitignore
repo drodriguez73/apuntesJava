@@ -1,3 +1,7 @@
+# My excludes
+mi-maven/
+
+
 # Compiled class file
 *.class
 

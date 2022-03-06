@@ -1,0 +1,38 @@
+# Referncias
+
+Java 8 new features
+	https://www.baeldung.com/java-8-new-features
+
+How to read all files in a folder from Java?
+	https://stackoverflow.com/questions/1844688/how-to-read-all-files-in-a-folder-from-java
+	
+### [Introduction to Java 8 Streams](https://www.baeldung.com/java-8-streams-introduction)
+
+java.util.stream – contains classes for processing sequences of elements. The central API class is the Stream<T>.
+
+Stream API helps to substitute for, for-each, and while loops. It allows concentrating on operation's logic, but not on the iteration over the sequence of elements
+
+
+
+	[The Java 8 Stream API Tutorial](https://www.baeldung.com/java-8-streams)
+	
+	[List Files in a Directory](https://www.baeldung.com/java-list-directory-files)
+	
+[Converting Between Stream and Array in Java](https://www.baeldung.com/java-stream-to-array)
+
+[Stream has already been operated upon or closed](https://www.baeldung.com/java-stream-operated-upon-or-closed-exception)
+
+
+
+
+
+
+
+## Read & Write Files
+
+[Reading and Writing Files in Java](https://stackabuse.com/reading-and-writing-files-in-java/)
+
+[How to Read and Write Text File in Java](https://www.codejava.net/java-se/file-io/how-to-read-and-write-text-file-in-java)
+
+[How do I filter files based on their last-modified dates?](http://www.avajava.com/tutorials/lessons/how-do-i-filter-files-based-on-their-last-modified-dates.html)
+

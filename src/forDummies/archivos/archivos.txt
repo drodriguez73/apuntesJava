@@ -1,0 +1,22 @@
+# Archivos
+
+### Read & Write Files
+
+[Reading and Writing Files in Java](https://stackabuse.com/reading-and-writing-files-in-java/)
+
+[How to Read and Write Text File in Java](https://www.codejava.net/java-se/file-io/how-to-read-and-write-text-file-in-java)
+
+[How do I filter files based on their last-modified dates?](http://www.avajava.com/tutorials/lessons/how-do-i-filter-files-based-on-their-last-modified-dates.html)
+
+
+Busco un JSON donde tenga todos los nombres de archivo y un indicador que me indique:
+
+- No procesado = 0
+- Procesado = 1
+
+Json
+{
+archivo1:1,
+archivo2:1,
+archivo3:0
+}
