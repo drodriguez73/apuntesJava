@@ -1,0 +1,56 @@
+<project>
+	<property name="debuglevel" value="source,lines,vars"/>
+	<property name="classes" value="target/build/classes"/>
+	<property name="src" value="src"/>
+	
+	<path id="general.classpath">
+		<pathelement location="${classes}"/>
+	</path>
+	
+	<path id="archivos.classpath">
+		<pathelement location="C:/Users/usuario/scala/mi-Maven/org/json/v20211205/json-20211205.jar"/>
+	</path>
+
+    <target name="compile">
+        <javac srcdir="${src}" destdir="${classes}"/>
+    </target>
+
+	<target name="compileArchivos">
+		<javac debug="true" debuglevel="${debuglevel}" srcdir="${src}" destdir="${classes}" includeantruntime="false">
+			<classpath refid="archivos.classpath"/>
+		</javac>
+	</target>
+
+
+	<target name="runListarCarpetas" depends="compile">
+		<java classname="forDummies.streams.ListarCarpetas" failonerror="true" fork="yes">
+			<classpath refid="general.classpath"/>
+		</java>
+	</target>
+
+	
+	<!-- forDummies.colecciones -->
+	<target name="runSetStruc" depends="compile">
+		<java classname="forDummies.colecciones.SetStruc" failonerror="true" fork="yes">
+			<classpath refid="general.classpath"/>
+		</java>
+	</target>
+
+
+
+
+	<!-- forDummies.archivos -->
+	<target name="runListarSimple" depends="compileArchivos">
+		<java classname="forDummies.archivos.ListarSimple" failonerror="true" fork="yes">
+			<classpath refid="general.classpath"/>
+			<classpath refid="archivos.classpath"/>
+		</java>
+	</target>
+	<target name="runJsonBasico" depends="compileArchivos">
+		<java classname="forDummies.archivos.JsonBasico" failonerror="true" fork="yes">
+			<classpath refid="general.classpath"/>
+			<classpath refid="archivos.classpath"/>
+		</java>
+	</target>
+
+</project>

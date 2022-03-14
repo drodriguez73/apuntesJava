@@ -20,3 +20,10 @@ archivo1:1,
 archivo2:1,
 archivo3:0
 }
+
+
+### Listar Directorios
+
+Utilizando *java.io.FileFilter* podemos lograr filtros muy interesantes.
+
+Si buscamos no escribir tanto codigo disponemos  de *org.apache.commons.io.filefilter.WildcardFileFilter*
