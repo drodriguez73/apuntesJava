@@ -2,12 +2,27 @@
 
 ### Read & Write Files
 
-[Reading and Writing Files in Java](https://stackabuse.com/reading-and-writing-files-in-java/)
+En el siguiente articulo [Reading and Writing Files in Java](https://stackabuse.com/reading-and-writing-files-in-java/) arranca explicando las diferencias basicas de leer|escribir archivos de texto vs binarios. Tambien indica que el paquete *java.nio* es mas moderno que *java.io* soportando non-blocking I/O
+
 
 [How to Read and Write Text File in Java](https://www.codejava.net/java-se/file-io/how-to-read-and-write-text-file-in-java)
 
-[How do I filter files based on their last-modified dates?](http://www.avajava.com/tutorials/lessons/how-do-i-filter-files-based-on-their-last-modified-dates.html)
 
+### File fecha de modificacion
+
+En *ListarSimple.java* hay un ejemplo que tiene que leer la fecha de modificacion de los archivos, esta es una forma de hacerlo [How do I filter files based on their last-modified dates?](http://www.avajava.com/tutorials/lessons/how-do-i-filter-files-based-on-their-last-modified-dates.html) pero me resulto mas facil en este caso utilizar *System.currentTimeMillis()*.
+
+Claro que para otros casos contamos con *java.time* pero este analisis ya corresponde a otro ejemplo.
+
+
+### Listar Directorios
+
+Utilizando *java.io.FileFilter* podemos lograr filtros muy interesantes.
+
+Si buscamos no escribir tanto codigo disponemos  de *org.apache.commons.io.filefilter.WildcardFileFilter*
+
+
+### Mas
 
 Busco un JSON donde tenga todos los nombres de archivo y un indicador que me indique:
 
@@ -20,10 +35,3 @@ archivo1:1,
 archivo2:1,
 archivo3:0
 }
-
-
-### Listar Directorios
-
-Utilizando *java.io.FileFilter* podemos lograr filtros muy interesantes.
-
-Si buscamos no escribir tanto codigo disponemos  de *org.apache.commons.io.filefilter.WildcardFileFilter*

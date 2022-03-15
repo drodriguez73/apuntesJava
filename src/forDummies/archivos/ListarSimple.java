@@ -38,25 +38,21 @@ public class ListarSimple {
         return archivos;
     }
 
-    public static File [] filtrarUltimaHora(File rootDir){
+    public static File[] filtrarUltimaHora(File rootDir){
 
         FileFilter fileFilter = new FileFilter() {
-
-            long ahora = System.currentTimeMillis();
 
             @Override
             public boolean accept(File pathname) {
                 /*
                 1 hora = 3.6e+6 = 3600000
                 */
-                
-                long modificado = pathname.lastModified();
 
-                if ((ahora - modificado) < 3600000) {
-                    return true;
-                } else {
-                    return false;
-                }
+                boolean ultima = ((System.currentTimeMillis() - pathname.lastModified()) < 3600000)
+                    ? true
+                    : false;
+                
+                return ultima;
             }
         };
 
@@ -67,8 +63,23 @@ public class ListarSimple {
 
     }
 
-    
 
+    // Igual a filtrarUltimaHora pero utilizando lambdas
+    public static File[] filtraultima(File rootDir) {
+
+        FileFilter fileFilter = (pathname) -> {
+            boolean ultima = ((System.currentTimeMillis() - pathname.lastModified()) < 3600000)
+                ? true
+                : false;
+            return ultima;
+            };
+
+        File[] archivos = rootDir.listFiles(fileFilter);
+        return archivos;
+
+    }
+
+    
 
 
     public static File[] filtroPdfConLamda(File rootDir) {
@@ -95,6 +106,12 @@ public class ListarSimple {
         System.out.println();
 
         System.out.println("Carpeta:" + Arrays.toString(filtrarUltimaHora(new File("c:/temp"))));
+
+        System.out.println();
+
+        System.out.println("Carpeta:" + Arrays.toString(filtraultima(new File("c:/temp"))));
+
+        
 
     }
 

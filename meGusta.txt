@@ -1,0 +1,8 @@
+# meGusta
+
+[if-else Ternary Operator](https://www.baeldung.com/java-ternary-operator)
+
+[Multiline Lambda](https://www.tutorialspoint.com/how-can-we-write-a-multiline-lambda-expression-in-java)
+
+
+
